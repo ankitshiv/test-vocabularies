@@ -5,11 +5,10 @@
   </edmx:Reference>
   <edmx:DataServices>
     <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Alias="SBN" Namespace="com.sap.vocabularies.SBN.v1">
-	  <Term Name="Hello" Nullable="false" AppliesTo="EntityType" Type="SBN.ComplexHello" />
-
-	  <ComplexType Name="ComplexHello">
+	  <Term Name="Hello" Nullable="false" Type="Edm.String" />
+<!-- 	  <ComplexType Name="ComplexHello">
 		  <Property Name="Title" Type="Edm.String" Nullable="true" />
-	  </ComplexType>
+	  </ComplexType> -->
 	</Schema>
   </edmx:DataServices>
 </edmx:Edmx>
