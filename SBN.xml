@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.01" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+  <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+    <edmx:Include Namespace="Org.OData.Core.V1" Alias="Core" />
+  </edmx:Reference>
+  <edmx:DataServices>
+    <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Alias="SBN" Namespace="com.sap.vocabularies.SBN.v1">
+	  <Term Name="Hello" Nullable="false" AppliesTo="EntityType" Type="SBN.ComplexHello" />
+
+	  <ComplexType Name="ComplexHello">
+		  <Property Name="Title" Type="Edm.String" Nullable="true" />
+	  </ComplexType>
+	</Schema>
+  </edmx:DataServices>
+</edmx:Edmx>
