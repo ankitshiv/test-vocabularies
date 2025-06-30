@@ -9,6 +9,21 @@
 	  <ComplexType Name="ComplexHello">
 		  <Property Name="Title" Type="Edm.String" Nullable="true" />
 	  </ComplexType>
-	</Schema>
+	<!-- Define FragmentAttribute complex type -->
+	  <ComplexType Name="FragmentAttribute">
+	    <Property Name="id" Type="Edm.String" Nullable="false"/>
+	    <Property Name="type" Type="Edm.String" Nullable="false"/>
+	    <Property Name="defaultValue" Type="Edm.String"/>
+	  </ComplexType>
+	
+	  <!-- Define FragmentExtension complex type -->
+	  <ComplexType Name="FragmentExtension">
+	    <Property Name="id" Type="Edm.String" Nullable="false"/>
+	    <Property Name="attributes" Type="Collection(SBN.FragmentAttribute)"/>
+	  </ComplexType>
+	
+	  <!-- Define FragmentExtensions term -->
+	  <Term Name="FragmentExtensions" Type="Collection(SBN.FragmentExtension)" AppliesTo="EntityContainer,EntitySet,EntityType"/>
+    </Schema>
   </edmx:DataServices>
 </edmx:Edmx>
